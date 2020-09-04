@@ -1,1 +1,22 @@
-123
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
+    </head>
+    <body>
+       <input type="text"></input>
+       <ul>
+           <li></li>
+       </ul>
+        <script>
+            //输入显示同步
+           function Synchronize(src,dst){
+               src.keyup(function(){
+                let str=src.val()
+                dst.text(str)   //设置文本
+                })
+            }
+            Synchronize($("input"),$("ul>li"))
+        </script>
+    </body>
+</html>
